@@ -1,12 +1,357 @@
-.jumbotron {
-  padding-top: 8rem;
-  background-color: #dc3545;
+/* PENGATURAN DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#projects {
-  background-color: #dc3545;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0b1420;
+  color: #f5f1e9;
+  font-family: Arial, sans-serif;
 }
 
 section {
-  padding-top: 6rem;
+  scroll-margin-top: 75px;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #0b1420;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+  font-size: 22px;
+  color: white;
+}
+
+.navbar-brand span {
+  color: #d9a16f;
+}
+
+.nav-link {
+  color: #e4e4e4;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.nav-link:hover {
+  color: #d9a16f;
+}
+
+/* HOME / BACKGROUND GUNUNG */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 110px 0 70px;
+
+  background:
+    linear-gradient(rgba(8, 17, 27, 0.45), rgba(8, 17, 27, 0.88)),
+    url("img/jabal.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  padding: 30px;
+}
+
+.welcome {
+  color: #e9b889;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.hero-content h1 {
+  font-size: 55px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #fffaf1;
+}
+
+.hero-content p {
+  font-size: 17px;
+}
+
+.quote {
+  margin-top: 25px;
+  color: #e8d6c4;
+  font-style: italic;
+}
+
+.btn-explore {
+  background-color: #bd8758;
+  color: white;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-explore:hover {
+  background-color: #98683f;
+  color: white;
+}
+
+/* FOTO PROFIL */
+.hero-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-photo img {
+  width: 320px;
+  height: 350px;
+  object-fit: cover;
+  border: 3px solid #d9a16f;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* SEMUA SECTION */
+.section-area {
+  padding: 90px 0;
+  background-color: #0b1420;
+}
+
+/* JUDUL SECTION */
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title p {
+  color: #d9a16f;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+.section-title h2 {
+  font-size: 35px;
+  font-weight: bold;
+  color: #fffaf1;
+}
+
+/* ABOUT */
+.info-card {
+  height: 100%;
+  padding: 30px;
+  background-color: #142333;
+  border: 1px solid rgba(217, 161, 111, 0.25);
+  border-radius: 15px;
+  line-height: 1.8;
+}
+
+.info-card h4 {
+  color: #d9a16f;
+  margin-bottom: 15px;
+}
+
+/* PROJECTS */
+#projects {
+  background-color: #101c29;
+}
+
+.project-card {
+  height: 100%;
+  overflow: hidden;
+  background-color: #172839;
+  border: 1px solid rgba(217, 161, 111, 0.2);
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h4 {
+  color: #e5b17f;
+  margin-bottom: 12px;
+}
+
+.card-content p {
+  line-height: 1.7;
+  color: #d4d9df;
+}
+
+/* 1. Atur card secara keseluruhan (biar tinggi menyesuaikan isi teks secara otomatis) */
+.hobby-card {
+  width: 100%;
+  background-color: #172839;
+  border: 1px solid rgba(217, 161, 111, 0.2);
+  border-radius: 8px; /* Biar sudut card melengkung rapi */
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.hobby-card:hover {
+  transform: scale(1.03);
+}
+
+/* 2. KHUSUS UNTUK KOTAK GAMBARNYA */
+.hobby-card img {
+  width: 100%;
+  height: 190px; /* Batasi tinggi khusus untuk gambar */
+  object-fit: contain; /* Supaya gambar pas dan tidak "zoom-in" berlebihan atau gepeng */
+}
+
+/* 3. Bagian Konten Teks */
+.hobby-content {
+  padding: 20px; /* Sesuaikan padding-nya jangan terlalu besar (sebelumnya 50px) */
+}
+
+.hobby-card h4 {
+  color: #e5b17f;
+  margin-bottom: 12px;
+}
+
+.hobby-card p {
+  line-height: 1.7;
+  color: #d4d9df;
+}
+
+/* CONTACT */
+#contact {
+  background-color: #101c29;
+}
+
+.form-label {
+  color: #e9b889;
+}
+
+.form-control {
+  background-color: #172839;
+  border: 1px solid #526170;
+  color: white;
+  padding: 12px;
+}
+
+.form-control:focus {
+  background-color: #172839;
+  color: white;
+  border-color: #d9a16f;
+  box-shadow: 0 0 0 0.2rem rgba(217, 161, 111, 0.2);
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+/* FOOTER */
+footer {
+  padding: 25px 10px;
+  text-align: center;
+  background-color: #080f19;
+  color: #cbd0d6;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 19px;
+  }
+
+  .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+
+  .hero-section {
+    min-height: 100vh;
+    padding: 100px 0 60px;
+    text-align: center;
+    background-position: center;
+  }
+
+  .hero-content {
+    padding: 10px 15px;
+  }
+
+  .hero-photo {
+    margin-bottom: 25px;
+  }
+
+  .hero-photo img {
+    width: 175px;
+    height: 200px;
+  }
+
+  .welcome {
+    font-size: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .quote {
+    margin-top: 18px;
+  }
+
+  .section-area {
+    padding: 70px 0;
+  }
+
+  .section-title h2 {
+    font-size: 29px;
+  }
+
+  .info-card {
+    padding: 23px;
+    text-align: center;
+  }
+
+  .project-card img {
+    height: 210px;
+  }
+
+  .hobby-card {
+    padding: 25px;
+  }
+}
+
+/* RESPONSIVE HP KECIL */
+@media (max-width: 380px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-photo img {
+    width: 155px;
+    height: 180px;
+  }
+
+  .welcome {
+    font-size: 13px;
+  }
 }
